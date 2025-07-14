@@ -1,26 +1,37 @@
 import React from 'react'
-import { ShieldCheckIcon, BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { ShieldCheckIcon, BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, CloudArrowUpIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import SecurityBadge from './SecurityBadge'
 
 const features = [
   {
     icon: ShieldCheckIcon,
     title: 'Secure & Private',
-    description: 'Your credentials are processed securely and never stored on our servers'
+    description: 'Advanced input validation and local storage for maximum security'
   },
   {
     icon: BoltIcon,
     title: 'Fast Results',
-    description: 'Get phone number information in seconds with our optimized API'
+    description: 'Real-time validation and optimized API calls for instant results'
   },
   {
     icon: DevicePhoneMobileIcon,
     title: 'Mobile Friendly',
-    description: 'Responsive design that works perfectly on all devices'
+    description: 'Fully responsive design with touch-friendly interface'
   },
   {
     icon: GlobeAltIcon,
     title: 'Global Coverage',
-    description: 'Support for international phone numbers and formats'
+    description: 'Support for 20+ countries with automatic number formatting'
+  },
+  {
+    icon: CloudArrowUpIcon,
+    title: 'Auto-Save',
+    description: 'Form data is automatically saved locally for your convenience'
+  },
+  {
+    icon: CheckCircleIcon,
+    title: 'Smart Validation',
+    description: 'Real-time form validation with helpful error messages'
   }
 ]
 
@@ -32,7 +43,7 @@ const Features: React.FC = () => {
         <p className="text-lg text-gray-600">Modern, reliable, and user-friendly phone lookup experience</p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -48,6 +59,8 @@ const Features: React.FC = () => {
           </div>
         ))}
       </div>
+      
+      <SecurityBadge />
     </div>
   )
 }

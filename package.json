@@ -10,10 +10,18 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "keywords": ["getcontact", "phone", "lookup", "api", "web", "react"],
+  "keywords": [
+    "getcontact",
+    "phone",
+    "lookup",
+    "api",
+    "web",
+    "react"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "axios": "^1.10.0",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
